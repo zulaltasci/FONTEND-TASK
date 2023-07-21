@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
+
+    <title>Quiz App</title>
+  </head>
+  <body>
+    
+   <div class="min-h-screen flex items-center justify-center font-roboto bg-sky-800">
+ 
+<div class="flex items-center justify-center bg-white shadow-lg shadow-white rounded-2xl p-10 mt-10 md:mt-0 w-[95%] md:w-[40%]">
+
+  <div class="flex flex-col "> 
+    <div id="quiz-container" class="flex flex-col gap-5 items-center justify-center font-roboto">
+      <h1 class="bg-red-500 text-white p-2 rounded">Uyarı ! İlk 10 saniye soruları yanıtlayamazsınız !!</h1>
+      <h2 id="question" class="text-3xl capitalize text-gray-700 font-semibold"></h2>
+      <div id="choices" class="flex flex-col gap-3"></div>
+      <div id="timer" class="bg-red-500 text-white p-8 rounded-full text-4xl"></div>
+    </div>
+    <div id="result-container" class="hidden">
+      <h2 class="text-center text-3xl text-gray-700 font-extrabold">Sonuçlar</h2>
+      <table id="result-table" >
+        <tr>
+          
+          <th scope="col" class="px-6 py-4 text-pink-400 border-r ">Sorular</th>
+          <th scope="col" class="px-6 py-4 text-pink-400"> Yanıtlar</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+   </div>
+  
+ <script src="quiz.js"></script>
+  </body>
+</html>
